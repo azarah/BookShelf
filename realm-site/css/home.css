@@ -1,0 +1,438 @@
+/* Home — Open Garden Archipelago hub */
+/* Author: Charletta Hudson */
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Source+Sans+3:wght@400;600&display=swap");
+
+body {
+  font-family: "Source Sans 3", Georgia, serif;
+  color: #1c2a22;
+  background:
+    radial-gradient(ellipse at 20% 0%, rgba(120, 180, 140, 0.35), transparent 50%),
+    radial-gradient(ellipse at 90% 20%, rgba(90, 140, 160, 0.25), transparent 45%),
+    linear-gradient(160deg, #d8e8d4 0%, #b8cfc4 40%, #8faba0 100%);
+  background-attachment: fixed;
+}
+
+.site-nav {
+  background: rgba(28, 42, 34, 0.88);
+  color: #e8f2ea;
+  border-bottom: none;
+}
+
+.site-nav a {
+  color: #e8f2ea;
+}
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: #f4faf5;
+}
+
+.hero-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: relative;
+  z-index: 1;
+  padding: 3rem 1.5rem 4rem;
+  background: linear-gradient(to top, rgba(12, 28, 20, 0.92) 10%, rgba(12, 28, 20, 0.35) 70%, transparent);
+}
+
+.hero .brand-title {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: clamp(2.4rem, 7vw, 4.5rem);
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.02em;
+  text-align: left;
+}
+
+.hero .author-hero {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.15rem;
+  font-style: italic;
+  margin: 0 0 1rem;
+  opacity: 0.95;
+  text-align: left;
+}
+
+.hero .lede {
+  max-width: 32rem;
+  font-size: 1.15rem;
+  line-height: 1.5;
+  margin: 0 0 1.5rem;
+  text-align: left;
+}
+
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.cta-row a {
+  display: inline-block;
+  padding: 0.65rem 1.2rem;
+  text-decoration: none;
+  border: 1px solid rgba(232, 242, 234, 0.55);
+  background: rgba(232, 242, 234, 0.12);
+  color: #f4faf5;
+  font-weight: 600;
+}
+
+.cta-row a:hover {
+  background: rgba(232, 242, 234, 0.28);
+}
+
+.section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.section h2 {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.section > .support {
+  text-align: center;
+  max-width: 36rem;
+  margin: 0 auto 2rem;
+  line-height: 1.55;
+}
+
+/* Bookstore shelf */
+.shelf-section {
+  max-width: 1120px;
+}
+
+.book-shelf {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1.75rem 1.25rem;
+  align-items: start;
+}
+
+.book-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.25s ease;
+}
+
+.book-card:hover,
+.book-card:focus-visible {
+  transform: translateY(-6px);
+}
+
+.book-card:focus-visible {
+  outline: 2px solid #1c4a38;
+  outline-offset: 6px;
+}
+
+.book-cover {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 2px;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.35) inset,
+    4px 0 10px rgba(28, 42, 34, 0.12),
+    0 12px 28px rgba(28, 42, 34, 0.18);
+  background: #2a3d32;
+}
+
+.book-card:hover .book-cover,
+.book-card:focus-visible .book-cover {
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.4) inset,
+    6px 0 14px rgba(28, 42, 34, 0.16),
+    0 18px 36px rgba(28, 42, 34, 0.22);
+}
+
+.book-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.book-title {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.book-blurb {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  opacity: 0.8;
+}
+
+.shelf-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  align-items: stretch;
+}
+
+.book-cta {
+  margin-top: 0.15rem;
+  position: relative;
+  z-index: 0;
+}
+
+.book-cta-btn {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.45rem 0.55rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #1c2a22;
+  border: 1px solid rgba(28, 42, 34, 0.35);
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.book-cta-btn:hover,
+.book-cta-btn:focus-visible {
+  background: rgba(255, 255, 255, 0.65);
+  outline: 2px solid #1c4a38;
+  outline-offset: 2px;
+}
+
+.shelf-inquiry {
+  margin-top: 2.75rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(28, 42, 34, 0.18);
+  text-align: center;
+}
+
+.shelf-inquiry h2 {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.6rem;
+  margin: 0 0 0.5rem;
+}
+
+.shelf-inquiry-cta {
+  margin-top: 1.25rem;
+}
+
+@media (min-width: 720px) {
+  .book-shelf {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem 1.5rem;
+  }
+}
+
+@media (min-width: 980px) {
+  .book-shelf {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.audio-panel {
+  background: rgba(28, 42, 34, 0.9);
+  color: #e8f2ea;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.audio-panel h2 {
+  font-family: "Fraunces", Georgia, serif;
+  margin-top: 0;
+}
+
+.audio-panel p {
+  margin: 0.5rem auto 1rem;
+  max-width: 28rem;
+  opacity: 0.9;
+}
+
+.audio-panel audio {
+  width: min(100%, 420px);
+}
+
+.lists-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.lists-grid h3 {
+  font-family: "Fraunces", Georgia, serif;
+  margin-bottom: 0.5rem;
+}
+
+.lists-grid ul,
+.lists-grid ol {
+  line-height: 1.7;
+  padding-left: 1.25rem;
+}
+
+.lists-grid dl {
+  margin: 0;
+}
+
+.lists-grid dt {
+  font-weight: 700;
+  margin-top: 0.75rem;
+}
+
+.lists-grid dd {
+  margin: 0.25rem 0 0 0;
+  opacity: 0.9;
+}
+
+.contact-note {
+  text-align: right;
+  font-style: italic;
+}
+
+.contact-note a {
+  color: #1c4a38;
+  font-weight: 600;
+}
+
+.home-inline-cta {
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.home-inline-cta a {
+  display: inline-block;
+  padding: 0.65rem 1.2rem;
+  text-decoration: none;
+  border: 1px solid rgba(28, 42, 34, 0.35);
+  background: rgba(255, 255, 255, 0.35);
+  color: #1c2a22;
+  font-weight: 600;
+}
+
+.home-inline-cta a:hover {
+  background: rgba(255, 255, 255, 0.55);
+}
+
+/* Inner pages (About, Contact, Store banner) */
+.page-banner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 1rem;
+  text-align: center;
+}
+
+.page-kicker {
+  margin: 0 0 0.5rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+.page-banner h1 {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  margin: 0 0 0.75rem;
+}
+
+.page-lede {
+  max-width: 34rem;
+  margin: 0 auto;
+  line-height: 1.55;
+  opacity: 0.9;
+}
+
+.prose-page {
+  max-width: 40rem;
+}
+
+.prose-page h2 {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.4rem;
+  text-align: left;
+  margin: 2rem 0 0.75rem;
+}
+
+.prose-page p,
+.prose-page li {
+  line-height: 1.6;
+}
+
+.contact-form {
+  display: grid;
+  gap: 1rem;
+  margin: 0 0 2rem;
+}
+
+.contact-form label {
+  display: grid;
+  gap: 0.35rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  font: inherit;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid rgba(28, 42, 34, 0.28);
+  background: rgba(255, 255, 255, 0.65);
+  color: #1c2a22;
+}
+
+.contact-form button {
+  justify-self: start;
+  font: inherit;
+  font-weight: 600;
+  padding: 0.7rem 1.25rem;
+  border: 1px solid rgba(28, 42, 34, 0.4);
+  background: #1c2a22;
+  color: #e8f2ea;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #2a4034;
+}
+
+.news-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1.75rem;
+}
+
+.news-list h2 {
+  margin: 0 0 0.35rem;
+}
+
+.news-date {
+  margin: 0 0 0.5rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}

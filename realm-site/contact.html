@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Open Garden Archipelago</title>
+  <meta name="author" content="Charletta Hudson">
+  <link rel="stylesheet" href="css/shared.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <nav class="site-nav" aria-label="Primary">
+    <a class="brand" href="index.html">Open Garden Archipelago</a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a class="current" href="contact.html">Contact</a></li>
+      <li><a href="store.html">Store</a></li>
+    </ul>
+  </nav>
+
+  <main id="main">
+    <header class="page-banner">
+      <p class="page-kicker">Contact</p>
+      <h1>Leave a note for the steward</h1>
+      <p class="page-lede">
+        Reader questions, collaboration, or feedback on the shelf — send a message.
+      </p>
+    </header>
+
+    <section class="section prose-page">
+      <form class="contact-form" action="mailto:zarah.sharda@gmail.com" method="post" enctype="text/plain">
+        <label>
+          Name
+          <input type="text" name="name" required autocomplete="name">
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" required autocomplete="email">
+        </label>
+        <label>
+          Subject
+          <input type="text" name="subject" required>
+        </label>
+        <label>
+          Message
+          <textarea name="message" rows="6" required></textarea>
+        </label>
+        <button type="submit">Send message</button>
+      </form>
+
+      <p class="contact-note">
+        Prefer email directly?
+        <a href="mailto:zarah.sharda@gmail.com?subject=Open%20Garden%20Archipelago">zarah.sharda@gmail.com</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Open Garden Archipelago · Stories by Charletta Hudson</p>
+    <p><a href="store.html">Store</a> · <a href="about.html">About Us</a></p>
+  </footer>
+</body>
+</html>

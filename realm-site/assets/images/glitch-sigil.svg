@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Glitch Code Society neon sigil">
+  <rect width="800" height="450" fill="#0a0612"/>
+  <rect x="0" y="80" width="800" height="2" fill="#c44dff" opacity="0.25"/>
+  <rect x="0" y="200" width="800" height="1" fill="#00f0ff" opacity="0.2"/>
+  <rect x="0" y="340" width="800" height="2" fill="#ff2d95" opacity="0.2"/>
+  <polygon points="400,70 520,160 480,320 320,320 280,160" fill="none" stroke="#c44dff" stroke-width="3"/>
+  <polygon points="400,100 490,170 460,290 340,290 310,170" fill="#1a0a28" stroke="#00f0ff" stroke-width="2"/>
+  <text x="400" y="230" text-anchor="middle" fill="#00f0ff" font-family="monospace" font-size="28" letter-spacing="4">GCS</text>
+  <text x="400" y="260" text-anchor="middle" fill="#ff2d95" font-family="monospace" font-size="12" letter-spacing="6">CIPHER404</text>
+  <rect x="120" y="380" width="80" height="8" fill="#c44dff"/>
+  <rect x="220" y="380" width="40" height="8" fill="#00f0ff"/>
+  <rect x="540" y="380" width="60" height="8" fill="#ff2d95"/>
+  <rect x="620" y="380" width="90" height="8" fill="#c44dff" opacity="0.6"/>
+</svg>

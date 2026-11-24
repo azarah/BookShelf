@@ -1,0 +1,1768 @@
+/* The Salt Between the Stars — deep-space chapter layout */
+/* Author: Charletta Hudson 
+   Date: November 23, 2026
+   Description: This is the CSS file for the Salt Between the Stars layout.
+*/
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,500;1,400&display=swap");
+
+body {
+  font-family: "IBM Plex Sans", sans-serif;
+  color: #d6e8f5;
+  background-color: #020814;
+  background-image:
+    radial-gradient(1px 1px at 20% 30%, #fff, transparent),
+    radial-gradient(1px 1px at 60% 70%, #9ec9ff, transparent),
+    radial-gradient(1.5px 1.5px at 80% 20%, #dcecff, transparent),
+    radial-gradient(1px 1px at 40% 85%, #fff, transparent),
+    linear-gradient(180deg, #020814 0%, #071428 50%, #0a1f38 100%);
+}
+
+.site-nav {
+  background: rgba(2, 8, 20, 0.95);
+  color: #8fd9e8;
+  border-bottom: 1px solid rgba(94, 200, 216, 0.25);
+}
+
+.site-nav a {
+  color: #8fd9e8;
+}
+
+.vessel {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+}
+
+.masthead {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.masthead .book {
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: #5ec8d8;
+}
+
+.masthead h1 {
+  font-family: "IBM Plex Serif", Georgia, serif;
+  font-weight: 500;
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin: 0.4rem 0;
+  color: #e8fbff;
+}
+
+.masthead .author,
+.author {
+  font-family: "IBM Plex Serif", Georgia, serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #8fd9e8;
+  margin: 0.35rem 0 0.75rem;
+  text-align: center;
+}
+
+.masthead .theory {
+  font-family: "IBM Plex Serif", Georgia, serif;
+  font-style: italic;
+  max-width: 34rem;
+  margin: 0.75rem auto 0;
+  color: #9ec9ff;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.craft-figure {
+  margin: 0 auto 2.5rem;
+  max-width: 560px;
+  text-align: center;
+}
+
+.craft-figure a {
+  display: inline-block;
+}
+
+.craft-figure figcaption {
+  margin-top: 0.6rem;
+  font-size: 0.85rem;
+  color: #7aa8c0;
+  text-align: center;
+}
+
+.chapter {
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(94, 200, 216, 0.15);
+}
+
+.chapter h2 {
+  font-family: "IBM Plex Serif", Georgia, serif;
+  font-size: 1.45rem;
+  color: #5ec8d8;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.chapter p,
+.story-body p {
+  line-height: 1.8;
+  margin: 0 0 1rem;
+  text-align: left;
+  max-width: 42rem;
+}
+
+/* Narrative body copy — separate from dialogue */
+.story-body {
+  color: #c5d9eb;
+}
+
+.story-body .story-section > p {
+  font-family: "IBM Plex Serif", Georgia, serif;
+  font-size: 1.08rem;
+  line-height: 1.85;
+  color: #c8dceb;
+  letter-spacing: 0.01em;
+  margin: 0 0 1.15rem;
+  max-width: 40rem;
+  text-align: left;
+}
+
+.story-body .story-section > h2.section-heading + p:not([class]),
+.story-body .story-section > h3.section-heading + p:not([class]) {
+  font-size: 1.14rem;
+  color: #e4f4ff;
+  border-left: 2px solid rgba(94, 200, 216, 0.55);
+  padding: 0.15rem 0 0.15rem 0.9rem;
+  margin-bottom: 1.35rem;
+  background: linear-gradient(
+    90deg,
+    rgba(94, 200, 216, 0.1) 0%,
+    transparent 72%
+  );
+}
+
+.story-body .story-section > h2.section-heading + p:not([class])::first-letter,
+.story-body .story-section > h3.section-heading + p:not([class])::first-letter {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 600;
+  font-size: 1.32em;
+  color: #5ec8d8;
+  letter-spacing: 0.04em;
+}
+
+.story-body .story-section > p.prose-beat {
+  max-width: 34rem;
+  margin: 1.35rem 0;
+  padding: 0.6rem 0.85rem 0.6rem 1rem;
+  border-left: 2px solid rgba(143, 217, 232, 0.6);
+  color: #e8fbff;
+  font-size: 1.12rem;
+  font-style: italic;
+  line-height: 1.65;
+  background:
+    linear-gradient(135deg, rgba(94, 200, 216, 0.1) 0%, transparent 58%),
+    rgba(4, 14, 28, 0.45);
+  box-shadow: inset 0 0 24px rgba(94, 200, 216, 0.04);
+}
+
+.story-body .story-section > p.prose-soft {
+  color: #8fb4cc;
+  font-style: italic;
+  font-size: 1.02rem;
+  margin: 1.25rem auto 1.4rem;
+  text-align: center;
+  max-width: 26rem;
+  letter-spacing: 0.02em;
+}
+
+.story-body .story-section > p.prose-soft::before,
+.story-body .story-section > p.prose-soft::after {
+  content: "";
+  display: inline-block;
+  width: 0.35rem;
+  height: 0.35rem;
+  margin: 0 0.5rem;
+  vertical-align: 0.2em;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #e8fbff, #5ec8d8 55%, transparent 70%);
+  opacity: 0.55;
+  box-shadow: 0 0 6px rgba(94, 200, 216, 0.35);
+}
+
+.story-body .story-section > p.prose-stamp {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #5ec8d8;
+  border: 1px solid rgba(94, 200, 216, 0.45);
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  background:
+    linear-gradient(180deg, rgba(94, 200, 216, 0.14) 0%, rgba(94, 200, 216, 0.05) 100%),
+    rgba(2, 8, 20, 0.6);
+  max-width: none;
+  margin: 0.5rem 0 1.25rem;
+  box-shadow: 0 0 18px rgba(94, 200, 216, 0.08);
+}
+
+.story-body .story-section > p strong {
+  color: #e8fbff;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(94, 200, 216, 0.5);
+  padding-bottom: 0.05em;
+}
+
+.story-body .story-section > p em {
+  color: #9ec9ff;
+  font-style: italic;
+}
+
+.story-body .story-section > p + .salt-channel {
+  margin-top: 1.75rem;
+}
+
+.story-body .story-section > .salt-channel + p {
+  margin-top: 0.55rem;
+}
+
+.story-body h2,
+.story-body h3,
+.story-body h4,
+.section-heading {
+  font-family: "IBM Plex Serif", Georgia, serif;
+  color: #5ec8d8;
+  text-align: left;
+  margin: 0 0 1rem;
+  line-height: 1.3;
+}
+
+.story-body h2,
+.story-body h2.section-heading {
+  font-size: clamp(1.4rem, 3vw, 1.75rem);
+  color: #8fd9e8;
+  border-bottom: 1px solid rgba(94, 200, 216, 0.35);
+  padding-bottom: 0.45rem;
+  letter-spacing: 0.02em;
+}
+
+.story-body h3,
+.story-body h3.section-heading {
+  font-size: 1.2rem;
+  color: #5ec8d8;
+  border-left: 3px solid #5ec8d8;
+  padding-left: 0.75rem;
+}
+
+.story-body h4,
+.story-body h4.section-heading {
+  font-size: 1.05rem;
+  font-style: italic;
+  color: #9ec9ff;
+}
+
+.chapter-toc {
+  background: rgba(10, 31, 56, 0.85);
+  border-color: rgba(94, 200, 216, 0.35);
+  color: #d6e8f5;
+  max-height: 22rem;
+  overflow: auto;
+}
+
+.chapter-toc .toc-title {
+  font-family: "IBM Plex Serif", Georgia, serif;
+  color: #8fd9e8;
+  text-transform: none;
+  letter-spacing: 0.02em;
+  font-size: 1.25rem;
+}
+
+.chapter-toc .toc-list a {
+  color: #9ec9ff;
+}
+
+.chapter-toc .toc-h2 a {
+  color: #e8fbff;
+}
+
+.story-body ul,
+.story-body ol {
+  line-height: 1.7;
+  margin: 0 0 1.25rem;
+  padding-left: 1.3rem;
+  max-width: 42rem;
+  color: #9ec9ff;
+}
+
+.story-body hr.story-break {
+  border: none;
+  border-top: 1px solid rgba(94, 200, 216, 0.25);
+  margin: 2.5rem auto;
+  width: 30%;
+}
+
+.story-body strong {
+  color: #e8fbff;
+}
+
+.chapter p.center-line {
+  text-align: center;
+  font-family: "IBM Plex Serif", Georgia, serif;
+  font-style: italic;
+  color: #8fd9e8;
+  margin: 1.5rem 0;
+}
+
+/* Salt dialogue channels — conversational pattern */
+.salt-channel {
+  margin: 1.5rem 0 1.85rem;
+  padding: 1rem 1rem 1.1rem;
+  background: rgba(4, 14, 28, 0.9);
+  border: 1px solid rgba(94, 200, 216, 0.35);
+  box-shadow: inset 0 0 36px rgba(94, 200, 216, 0.05);
+  max-width: 42rem;
+}
+
+.salt-channel .channel-label {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #5ec8d8;
+  margin: 0 0 0.95rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px dashed rgba(94, 200, 216, 0.35);
+}
+
+.salt-channel .line {
+  display: grid;
+  grid-template-columns: 7rem 1fr;
+  gap: 0.3rem 0.85rem;
+  margin: 0 0 0.85rem;
+  padding: 0.55rem 0.7rem;
+  border-left: 3px solid transparent;
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.salt-channel .line:last-child {
+  margin-bottom: 0;
+}
+
+.salt-channel .line .speaker {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  align-self: start;
+  padding-top: 0.15rem;
+}
+
+.salt-channel .line .beat {
+  grid-column: 2;
+  margin: 0;
+  font-family: "IBM Plex Serif", Georgia, serif;
+  font-size: 0.88rem;
+  font-style: italic;
+  color: #7aa8c0;
+  line-height: 1.4;
+  max-width: none;
+  text-align: left;
+}
+
+.salt-channel .line .say {
+  grid-column: 2;
+  margin: 0;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.55;
+  color: #e4f2ff;
+  max-width: none;
+  text-align: left;
+}
+
+.salt-channel .line .say.soft {
+  color: #b7d7ea;
+  font-family: "IBM Plex Serif", Georgia, serif;
+  font-style: italic;
+}
+
+.salt-channel .line .say .term {
+  color: #8fd9e8;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.salt-channel .narration {
+  margin: 0.7rem 0 0.9rem;
+  text-align: center;
+  font-family: "IBM Plex Serif", Georgia, serif;
+  font-style: italic;
+  color: #8fb4cc;
+  font-size: 0.98rem;
+  max-width: none;
+}
+
+/* Speakers */
+.salt-channel .line.ayaan {
+  border-left-color: #5ec8d8;
+}
+.salt-channel .line.ayaan .speaker {
+  color: #5ec8d8;
+}
+
+.salt-channel .line.leena {
+  border-left-color: #9ec9ff;
+}
+.salt-channel .line.leena .speaker {
+  color: #9ec9ff;
+}
+
+.salt-channel .line.someone {
+  border-left-color: #8aa4b8;
+}
+.salt-channel .line.someone .speaker {
+  color: #8aa4b8;
+}
+
+.salt-channel .line.philosopher {
+  border-left-color: #d4c4a8;
+}
+.salt-channel .line.philosopher .speaker {
+  color: #d4c4a8;
+}
+
+.salt-channel .line.theologian {
+  border-left-color: #8fd9e8;
+}
+.salt-channel .line.theologian .speaker {
+  color: #8fd9e8;
+}
+
+.salt-channel .line.children {
+  border-left-color: #7dffc8;
+}
+.salt-channel .line.children .speaker {
+  color: #7dffc8;
+}
+
+.salt-channel .line.board {
+  border-left-color: #b8c4d0;
+}
+.salt-channel .line.board .speaker {
+  color: #b8c4d0;
+}
+
+.salt-channel .line.chorus {
+  border-left-color: #6f8498;
+}
+.salt-channel .line.chorus .speaker {
+  color: #6f8498;
+}
+
+.salt-channel .line.ascendant {
+  border-left-color: #e8a06a;
+  background: rgba(232, 160, 106, 0.06);
+}
+.salt-channel .line.ascendant .speaker {
+  color: #e8a06a;
+}
+
+.salt-channel .line.verse {
+  border-left-color: #a8d8c8;
+  background: rgba(168, 216, 200, 0.05);
+}
+.salt-channel .line.verse .speaker {
+  color: #a8d8c8;
+}
+
+.salt-channel .line.chronicle {
+  border-left-color: #5ec8d8;
+  background: rgba(94, 200, 216, 0.05);
+}
+.salt-channel .line.chronicle .speaker {
+  color: #5ec8d8;
+}
+
+/* Context skins */
+.salt-channel--deck {
+  border-color: rgba(143, 217, 232, 0.4);
+  background:
+    linear-gradient(180deg, rgba(94, 200, 216, 0.08), transparent 40%),
+    rgba(4, 14, 28, 0.92);
+}
+
+.salt-channel--bridge {
+  border-color: rgba(158, 201, 255, 0.4);
+}
+
+.salt-channel--transmission {
+  border-color: rgba(232, 160, 106, 0.5);
+  background:
+    linear-gradient(180deg, rgba(232, 160, 106, 0.12) 0%, transparent 45%),
+    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(94, 200, 216, 0.08), transparent 55%),
+    rgba(4, 14, 28, 0.94);
+  box-shadow:
+    inset 0 0 36px rgba(232, 160, 106, 0.08),
+    0 0 28px rgba(232, 160, 106, 0.06);
+}
+
+.salt-channel--transmission .channel-label {
+  color: #e8a06a;
+  border-bottom-color: rgba(232, 160, 106, 0.35);
+}
+
+.salt-channel--transmission .line.ascendant {
+  background: rgba(232, 160, 106, 0.1);
+}
+
+.salt-channel--chamber {
+  border-color: rgba(212, 196, 168, 0.35);
+  background: rgba(8, 16, 28, 0.95);
+}
+
+.salt-channel--chamber .channel-label {
+  color: #d4c4a8;
+  border-bottom-color: rgba(212, 196, 168, 0.3);
+}
+
+.salt-channel--verse {
+  border-color: rgba(168, 216, 200, 0.4);
+  background: rgba(6, 20, 22, 0.92);
+}
+
+.salt-channel--verse .channel-label {
+  color: #a8d8c8;
+  border-bottom-color: rgba(168, 216, 200, 0.35);
+}
+
+.salt-channel--children {
+  border-color: rgba(125, 255, 200, 0.35);
+}
+
+.salt-channel--children .channel-label {
+  color: #7dffc8;
+}
+
+.salt-channel--chronicle,
+.salt-channel--memory {
+  border-style: dashed;
+  border-color: rgba(94, 200, 216, 0.4);
+}
+
+.salt-channel--chronicle {
+  background:
+    linear-gradient(90deg, rgba(94, 200, 216, 0.09) 0%, transparent 55%),
+    rgba(4, 14, 28, 0.92);
+  box-shadow:
+    inset 0 0 40px rgba(94, 200, 216, 0.06),
+    inset 3px 0 0 rgba(94, 200, 216, 0.35);
+}
+
+.salt-channel--chronicle .channel-label {
+  letter-spacing: 0.2em;
+}
+
+.salt-channel--chronicle .line.chronicle {
+  background: rgba(94, 200, 216, 0.08);
+}
+
+.salt-channel--memory .channel-label {
+  color: #8aa4b8;
+}
+
+@media (max-width: 560px) {
+  .salt-channel .line {
+    grid-template-columns: 1fr;
+  }
+
+  .salt-channel .line .speaker,
+  .salt-channel .line .beat,
+  .salt-channel .line .say {
+    grid-column: 1;
+  }
+}
+
+.salinity-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  font-size: 0.92rem;
+}
+
+.salinity-table caption {
+  caption-side: top;
+  text-align: left;
+  font-family: "IBM Plex Serif", Georgia, serif;
+  font-size: 1.1rem;
+  color: #8fd9e8;
+  margin-bottom: 0.6rem;
+}
+
+.salinity-table th,
+.salinity-table td {
+  border: 1px solid rgba(94, 200, 216, 0.3);
+  padding: 0.55rem 0.7rem;
+}
+
+.salinity-table th {
+  background: rgba(94, 200, 216, 0.15);
+  text-align: left;
+  color: #e8fbff;
+}
+
+.salinity-table td {
+  text-align: center;
+}
+
+.glossary {
+  background: rgba(10, 31, 56, 0.8);
+  border: 1px solid rgba(94, 200, 216, 0.25);
+  padding: 1.25rem 1.5rem;
+  margin: 2rem 0;
+}
+
+.glossary h2 {
+  font-family: "IBM Plex Serif", Georgia, serif;
+  font-size: 1.25rem;
+  color: #5ec8d8;
+  margin-top: 0;
+  text-align: left;
+}
+
+.glossary dl {
+  margin: 0;
+}
+
+.glossary dt {
+  font-weight: 600;
+  color: #e8fbff;
+  margin-top: 0.85rem;
+}
+
+.glossary dd {
+  margin: 0.2rem 0 0;
+  color: #9ec9ff;
+  line-height: 1.5;
+}
+
+.toc {
+  text-align: right;
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+}
+
+.toc a {
+  color: #5ec8d8;
+  margin-left: 0.75rem;
+}
+
+.verse-ref {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.verse-ref a {
+  color: #8fd9e8;
+}
+
+/* Fixed discrete ambient audio control */
+.salt-audio-dock {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.45rem 0.65rem 0.45rem 0.75rem;
+  background: rgba(2, 8, 20, 0.88);
+  border: 1px solid rgba(94, 200, 216, 0.45);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
+  max-width: calc(100vw - 2rem);
+}
+
+.salt-audio-label {
+  font-family: "IBM Plex Serif", Georgia, serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #5ec8d8;
+  white-space: nowrap;
+}
+
+.salt-audio-dock audio {
+  width: 148px;
+  height: 28px;
+  opacity: 0.9;
+  vertical-align: middle;
+}
+
+.salt-audio-dock audio::-webkit-media-controls-enclosure {
+  border-radius: 0;
+  background: transparent;
+}
+
+.salt-ss-launch {
+  font-family: "IBM Plex Serif", Georgia, serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #020814;
+  background: #5ec8d8;
+  border: none;
+  padding: 0.35rem 0.55rem;
+  cursor: pointer;
+}
+
+.salt-ss-launch:hover,
+.salt-ss-launch:focus-visible {
+  background: #8fd9e8;
+  outline: 2px solid #e8fbff;
+  outline-offset: 2px;
+}
+
+@media (max-width: 480px) {
+  .salt-audio-dock {
+    right: 0.5rem;
+    bottom: 0.5rem;
+    padding: 0.35rem 0.45rem;
+  }
+
+  .salt-audio-dock audio {
+    width: 120px;
+  }
+}
+
+/* =========================================================
+   Living-craft screensaver — soft jelly silhouette in blue gradients
+   ========================================================= */
+
+html.salt-ss-active,
+html.salt-ss-active body {
+  overflow: hidden;
+}
+
+.salt-ss {
+  position: fixed;
+  inset: 0;
+  z-index: 400;
+  margin: 0;
+  cursor: crosshair;
+  background: #01060f;
+  --salt-ss-px: 0px;
+  --salt-ss-py: 0px;
+}
+
+.salt-ss[hidden] {
+  display: none !important;
+}
+
+.salt-ss-sky {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  transition: background 1.4s ease;
+  background:
+    radial-gradient(ellipse 140% 90% at 50% 120%, #0c4a63 0%, transparent 52%),
+    linear-gradient(
+      180deg,
+      #020814 0%,
+      #061428 22%,
+      #0a3050 48%,
+      #0e4a68 72%,
+      #163e58 100%
+    );
+}
+
+.salt-ss--zone-water .salt-ss-sky {
+  background:
+    radial-gradient(ellipse at 50% 80%, rgba(40, 160, 200, 0.35), transparent 50%),
+    linear-gradient(
+      180deg,
+      #06304a 0%,
+      #0a4a68 28%,
+      #0e6a88 58%,
+      #1480a0 82%,
+      #1a90b0 100%
+    );
+}
+
+.salt-ss--zone-sky .salt-ss-sky {
+  background:
+    radial-gradient(ellipse at 70% 20%, rgba(180, 220, 255, 0.2), transparent 45%),
+    linear-gradient(
+      180deg,
+      #6a9ec0 0%,
+      #4a88b0 25%,
+      #2a6a98 55%,
+      #184868 80%,
+      #0e3048 100%
+    );
+}
+
+.salt-ss--zone-space .salt-ss-sky {
+  background:
+    radial-gradient(ellipse at 30% 40%, rgba(80, 40, 120, 0.25), transparent 50%),
+    radial-gradient(ellipse at 70% 60%, rgba(20, 80, 140, 0.3), transparent 45%),
+    linear-gradient(
+      180deg,
+      #02040c 0%,
+      #080818 30%,
+      #0a1830 60%,
+      #061020 100%
+    );
+}
+
+.salt-ss-field {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+  transform: translate3d(var(--salt-ss-px), var(--salt-ss-py), 0);
+  will-change: transform, opacity;
+  pointer-events: none;
+}
+
+.salt-ss--zone-water .salt-ss-field--water,
+.salt-ss--zone-sky .salt-ss-field--sky,
+.salt-ss--zone-space .salt-ss-field--space {
+  opacity: 1;
+}
+
+.salt-ss-stars {
+  position: absolute;
+  inset: -10%;
+  background-image:
+    radial-gradient(1px 1px at 8% 12%, #fff, transparent),
+    radial-gradient(1px 1px at 22% 38%, #9ec9ff, transparent),
+    radial-gradient(1.5px 1.5px at 41% 18%, #dcecff, transparent),
+    radial-gradient(1px 1px at 63% 55%, #fff, transparent),
+    radial-gradient(1px 1px at 78% 22%, #8fd9e8, transparent),
+    radial-gradient(1.5px 1.5px at 91% 70%, #fff, transparent),
+    radial-gradient(1px 1px at 15% 78%, #cde8ff, transparent),
+    radial-gradient(1px 1px at 35% 88%, #fff, transparent),
+    radial-gradient(1px 1px at 55% 8%, #9ec9ff, transparent),
+    radial-gradient(1px 1px at 84% 42%, #fff, transparent);
+  opacity: 0.55;
+  animation: salt-ss-drift 110s linear infinite;
+}
+
+.salt-ss-stars--near {
+  opacity: 0.7;
+  transform: scale(1.15);
+  animation-duration: 70s;
+  animation-direction: reverse;
+}
+
+.salt-ss-bubbles,
+.salt-ss-clouds,
+.salt-ss-gas {
+  position: absolute;
+  inset: -5%;
+}
+
+.salt-ss-bubble {
+  position: absolute;
+  width: calc(10px * var(--s, 1));
+  height: calc(10px * var(--s, 1));
+  border-radius: 50%;
+  border: 1px solid rgba(220, 245, 255, 0.45);
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(255, 255, 255, 0.55),
+    rgba(120, 210, 240, 0.12) 45%,
+    transparent 70%
+  );
+  box-shadow: 0 0 12px rgba(140, 220, 255, 0.25);
+  animation: salt-ss-bubble-rise var(--d, 10s) linear infinite;
+  animation-delay: var(--delay, 0s);
+}
+
+.salt-ss-cloud {
+  position: absolute;
+  width: calc(90px * var(--s, 1));
+  height: calc(42px * var(--s, 1));
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 255, 255, 0.35),
+    rgba(200, 230, 255, 0.12) 50%,
+    transparent 75%
+  );
+  filter: blur(12px);
+  animation: salt-ss-cloud-drift var(--d, 24s) ease-in-out infinite alternate;
+  animation-delay: var(--delay, 0s);
+}
+
+.salt-ss-wisp {
+  position: absolute;
+  width: calc(120px * var(--s, 1));
+  height: calc(70px * var(--s, 1));
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(140, 100, 220, 0.22),
+    rgba(40, 120, 200, 0.14) 45%,
+    transparent 75%
+  );
+  filter: blur(18px);
+  mix-blend-mode: screen;
+  animation: salt-ss-wisp-drift var(--d, 28s) ease-in-out infinite alternate;
+  animation-delay: var(--delay, 0s);
+}
+
+.salt-ss-band {
+  position: absolute;
+  left: -15%;
+  width: 130%;
+  pointer-events: none;
+  filter: blur(28px);
+  mix-blend-mode: screen;
+  transform: translate3d(calc(var(--salt-ss-px) * 0.35), calc(var(--salt-ss-py) * 0.35), 0);
+  transition: opacity 1.2s ease;
+}
+
+.salt-ss-band--void {
+  top: -5%;
+  height: 36%;
+  background: linear-gradient(
+    185deg,
+    rgba(2, 8, 20, 0.85),
+    rgba(8, 24, 48, 0.35),
+    transparent
+  );
+  animation: salt-ss-band-drift 36s ease-in-out infinite alternate;
+}
+
+.salt-ss-band--ion {
+  top: 16%;
+  height: 34%;
+  background: linear-gradient(
+    190deg,
+    transparent,
+    rgba(40, 110, 160, 0.22),
+    rgba(90, 190, 220, 0.16),
+    transparent
+  );
+  animation: salt-ss-band-drift 42s ease-in-out infinite alternate-reverse;
+}
+
+.salt-ss-band--salt {
+  top: 38%;
+  height: 38%;
+  background: linear-gradient(
+    175deg,
+    transparent,
+    rgba(60, 140, 180, 0.2),
+    rgba(120, 210, 230, 0.18),
+    rgba(30, 90, 130, 0.22),
+    transparent
+  );
+  animation: salt-ss-band-drift 50s ease-in-out infinite alternate;
+}
+
+.salt-ss-band--air {
+  bottom: -8%;
+  height: 46%;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(20, 80, 110, 0.35),
+    rgba(40, 120, 150, 0.45),
+    rgba(18, 70, 100, 0.55)
+  );
+  animation: salt-ss-band-drift 44s ease-in-out infinite alternate-reverse;
+}
+
+.salt-ss--zone-water .salt-ss-band--void,
+.salt-ss--zone-water .salt-ss-band--ion {
+  opacity: 0.25;
+}
+
+.salt-ss--zone-space .salt-ss-band--air,
+.salt-ss--zone-space .salt-ss-band--salt {
+  opacity: 0.2;
+}
+
+/* Steered traveler */
+.salt-ss-traveler {
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+}
+
+.salt-ss-jelly {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 180px;
+  height: 240px;
+  transform: translate(-50%, -50%);
+  transform-origin: 50% 25%;
+  animation: salt-ss-bob 7s ease-in-out infinite;
+}
+
+.salt-ss--zone-water .salt-ss-jelly {
+  filter: drop-shadow(0 0 24px rgba(120, 220, 255, 0.55));
+}
+
+.salt-ss--zone-sky .salt-ss-jelly {
+  filter: drop-shadow(0 0 22px rgba(200, 230, 255, 0.45));
+}
+
+.salt-ss--zone-space .salt-ss-jelly {
+  filter: drop-shadow(0 0 30px rgba(160, 120, 255, 0.4));
+}
+
+.salt-ss-blur {
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.salt-ss-blur--wake {
+  left: 8%;
+  top: 6%;
+  width: 150px;
+  height: 120px;
+  background: radial-gradient(
+    ellipse at 50% 45%,
+    rgba(160, 230, 255, 0.22),
+    rgba(70, 160, 200, 0.08) 48%,
+    transparent 72%
+  );
+  filter: blur(22px);
+  animation: salt-ss-morph 8s ease-in-out infinite;
+}
+
+.salt-ss-blur--bell {
+  left: 22%;
+  top: 10%;
+  width: 110px;
+  height: 78px;
+  background: radial-gradient(
+    ellipse 80% 70% at 50% 40%,
+    rgba(210, 245, 255, 0.5),
+    rgba(90, 190, 220, 0.28) 42%,
+    rgba(40, 120, 160, 0.12) 68%,
+    transparent 78%
+  );
+  filter: blur(14px);
+  animation: salt-ss-pulse-soft 5.5s ease-in-out infinite;
+}
+
+.salt-ss-blur--core {
+  left: 38%;
+  top: 22%;
+  width: 48px;
+  height: 36px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.65),
+    rgba(150, 230, 250, 0.35) 45%,
+    transparent 75%
+  );
+  filter: blur(8px);
+  animation: salt-ss-core-breathe 4.2s ease-in-out infinite;
+}
+
+.salt-ss-blur--veil {
+  left: 28%;
+  top: 42%;
+  width: 90px;
+  height: 70px;
+  background: radial-gradient(
+    ellipse at 50% 20%,
+    rgba(120, 210, 235, 0.28),
+    rgba(60, 140, 180, 0.12) 50%,
+    transparent 75%
+  );
+  filter: blur(16px);
+  animation: salt-ss-veil-drift 6.5s ease-in-out infinite;
+}
+
+.salt-ss-blur--trail-a,
+.salt-ss-blur--trail-b,
+.salt-ss-blur--trail-c {
+  width: 28px;
+  background: linear-gradient(
+    180deg,
+    rgba(180, 235, 255, 0.28),
+    rgba(80, 170, 210, 0.12),
+    transparent
+  );
+  filter: blur(10px);
+  border-radius: 40% 40% 50% 50%;
+}
+
+.salt-ss-blur--trail-a {
+  left: 34%;
+  top: 55%;
+  height: 110px;
+  animation: salt-ss-trail 6s ease-in-out infinite;
+}
+
+.salt-ss-blur--trail-b {
+  left: 48%;
+  top: 58%;
+  height: 130px;
+  width: 22px;
+  animation: salt-ss-trail 7.2s ease-in-out infinite 0.4s;
+}
+
+.salt-ss-blur--trail-c {
+  left: 58%;
+  top: 56%;
+  height: 100px;
+  width: 24px;
+  animation: salt-ss-trail 5.6s ease-in-out infinite 0.8s;
+}
+
+.salt-ss-hud {
+  position: absolute;
+  left: 50%;
+  bottom: 1.25rem;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.55rem;
+  width: min(92vw, 28rem);
+  pointer-events: auto;
+  text-align: center;
+}
+
+.salt-ss-zone-label {
+  margin: 0;
+  font-family: "IBM Plex Serif", Georgia, serif;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  color: rgba(232, 251, 255, 0.92);
+  text-shadow: 0 0 14px rgba(94, 200, 216, 0.4);
+  max-width: none;
+}
+
+.salt-ss-zones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.salt-ss-zone-btn {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #8fd9e8;
+  background: rgba(2, 12, 24, 0.65);
+  border: 1px solid rgba(143, 217, 232, 0.4);
+  padding: 0.4rem 0.7rem;
+  cursor: pointer;
+}
+
+.salt-ss-zone-btn:hover,
+.salt-ss-zone-btn:focus-visible {
+  background: rgba(94, 200, 216, 0.18);
+  outline: 2px solid #8fd9e8;
+  outline-offset: 2px;
+}
+
+.salt-ss-zone-btn.is-active {
+  color: #020814;
+  background: #8fd9e8;
+  border-color: #8fd9e8;
+}
+
+.salt-ss-hint {
+  margin: 0;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  color: rgba(143, 217, 232, 0.7);
+  max-width: none;
+}
+
+.salt-ss-exit {
+  font-family: "IBM Plex Serif", Georgia, serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  color: #e8fbff;
+  background: transparent;
+  border: 1px solid rgba(232, 251, 255, 0.35);
+  padding: 0.35rem 0.75rem;
+  cursor: pointer;
+}
+
+.salt-ss-exit:hover,
+.salt-ss-exit:focus-visible {
+  border-color: #8fd9e8;
+  color: #8fd9e8;
+}
+
+@keyframes salt-ss-band-drift {
+  0% {
+    transform: translate3d(calc(var(--salt-ss-px) * 0.35 - 2%), 0, 0) scaleY(1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate3d(calc(var(--salt-ss-px) * 0.35 + 3%), 4%, 0) scaleY(1.08);
+    opacity: 1;
+  }
+}
+
+@keyframes salt-ss-bubble-rise {
+  0% {
+    transform: translateY(20px) scale(0.85);
+    opacity: 0;
+  }
+  12% {
+    opacity: 0.85;
+  }
+  100% {
+    transform: translateY(-110px) scale(1.1);
+    opacity: 0;
+  }
+}
+
+@keyframes salt-ss-cloud-drift {
+  0% {
+    transform: translate3d(-8px, 0, 0) scale(1);
+  }
+  100% {
+    transform: translate3d(18px, -10px, 0) scale(1.08);
+  }
+}
+
+@keyframes salt-ss-wisp-drift {
+  0% {
+    transform: translate3d(-12px, 6px, 0) rotate(-4deg) scale(1);
+    opacity: 0.45;
+  }
+  100% {
+    transform: translate3d(16px, -14px, 0) rotate(6deg) scale(1.12);
+    opacity: 0.85;
+  }
+}
+
+@keyframes salt-ss-bob {
+  0%,
+  100% {
+    transform: translateY(0) scale(1, 1);
+  }
+  50% {
+    transform: translateY(-18px) scale(1.04, 0.94);
+  }
+}
+
+@keyframes salt-ss-pulse-soft {
+  0%,
+  100% {
+    transform: scale(1, 1);
+    opacity: 0.75;
+  }
+  40% {
+    transform: scale(1.12, 0.88);
+    opacity: 1;
+  }
+  70% {
+    transform: scale(0.94, 1.08);
+    opacity: 0.85;
+  }
+}
+
+@keyframes salt-ss-morph {
+  0%,
+  100% {
+    transform: scale(1) translate(0, 0);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.15, 0.9) translate(4%, 3%);
+    opacity: 0.8;
+  }
+}
+
+@keyframes salt-ss-core-breathe {
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: scale(0.85);
+  }
+  50% {
+    opacity: 0.95;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes salt-ss-veil-drift {
+  0%,
+  100% {
+    transform: translateY(0) scaleY(1);
+    opacity: 0.45;
+  }
+  50% {
+    transform: translateY(10px) scaleY(1.15);
+    opacity: 0.75;
+  }
+}
+
+@keyframes salt-ss-trail {
+  0%,
+  100% {
+    transform: translateY(0) skewX(-6deg);
+    opacity: 0.35;
+  }
+  50% {
+    transform: translateY(12px) skewX(8deg);
+    opacity: 0.7;
+  }
+}
+
+@keyframes salt-ss-drift {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-4%, 2%, 0);
+  }
+}
+
+@media (max-width: 640px) {
+  .salt-ss-jelly {
+    width: 130px;
+    height: 190px;
+  }
+
+  .salt-ss-blur--bell {
+    width: 86px;
+    height: 62px;
+    left: 18%;
+  }
+
+  .salt-ss-hud {
+    bottom: 0.75rem;
+    gap: 0.4rem;
+  }
+
+  .salt-ss-hint {
+    font-size: 0.62rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .salt-ss-jelly,
+  .salt-ss-blur,
+  .salt-ss-stars,
+  .salt-ss-band,
+  .salt-ss-bubble,
+  .salt-ss-cloud,
+  .salt-ss-wisp {
+    animation: none !important;
+  }
+
+  .salt-ss-field,
+  .salt-ss-sky {
+    transition: none;
+  }
+
+  .salt-ss-blur--bell,
+  .salt-ss-blur--core {
+    opacity: 0.9;
+  }
+}
+
+/* ——— Ebook mode (fade pages) ——— */
+.book-mode-launch {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 1.5rem;
+}
+
+.book-mode-launch__btn {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 600;
+  font-size: 0.88rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #e8fbff;
+  background: rgba(10, 31, 56, 0.9);
+  border: 1px solid rgba(94, 200, 216, 0.55);
+  border-radius: 999px;
+  padding: 0.7rem 1.4rem;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.book-mode-launch__btn:hover,
+.book-mode-launch__btn:focus-visible {
+  background: rgba(94, 200, 216, 0.22);
+  border-color: #5ec8d8;
+  outline: none;
+  transform: translateY(-1px);
+}
+
+.book-mode {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  display: flex;
+  flex-direction: column;
+  background:
+    radial-gradient(ellipse at 18% 12%, rgba(94, 200, 216, 0.18), transparent 48%),
+    radial-gradient(ellipse at 82% 88%, rgba(40, 90, 140, 0.28), transparent 42%),
+    linear-gradient(180deg, #020814 0%, #071428 55%, #0a1f38 100%);
+  color: #d6e8f5;
+}
+
+.book-mode[hidden] {
+  display: none !important;
+}
+
+body.book-mode-active {
+  overflow: hidden;
+}
+
+body.book-mode-active .site-nav,
+body.book-mode-active .vessel,
+body.book-mode-active .site-footer,
+body.book-mode-active .salt-audio-dock {
+  visibility: hidden;
+}
+
+.book-chrome {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem 1rem;
+  padding: 0.75rem 1rem;
+  background: rgba(2, 8, 20, 0.92);
+  border-bottom: 1px solid rgba(94, 200, 216, 0.35);
+}
+
+.book-chrome__title {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #5ec8d8;
+  margin: 0;
+  flex: 1 1 auto;
+  min-width: 8rem;
+}
+
+.book-chrome__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.85rem;
+}
+
+.book-chrome label {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #8fd9e8;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.book-chrome select {
+  font-family: "IBM Plex Serif", Georgia, serif;
+  font-size: 0.95rem;
+  max-width: min(16rem, 52vw);
+  background: #071428;
+  color: #e8fbff;
+  border: 1px solid rgba(94, 200, 216, 0.45);
+  border-radius: 0.35rem;
+  padding: 0.35rem 0.5rem;
+}
+
+.book-progress {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  color: #8fd9e8;
+  min-width: 4.5rem;
+  text-align: right;
+}
+
+.book-chrome__btn {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: transparent;
+  color: #8fd9e8;
+  border: 1px solid rgba(94, 200, 216, 0.45);
+  border-radius: 999px;
+  padding: 0.4rem 0.85rem;
+  cursor: pointer;
+}
+
+.book-chrome__btn:hover,
+.book-chrome__btn:focus-visible {
+  background: rgba(94, 200, 216, 0.2);
+  color: #e8fbff;
+  outline: none;
+}
+
+.book-stage {
+  flex: 1;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 0.5rem 0.5rem;
+  min-height: 0;
+}
+
+.book-nav {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(94, 200, 216, 0.5);
+  background: rgba(7, 20, 40, 0.85);
+  color: #e8fbff;
+  font-size: 1.35rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s ease, opacity 0.2s ease;
+}
+
+.book-nav:hover:not(:disabled),
+.book-nav:focus-visible:not(:disabled) {
+  background: rgba(94, 200, 216, 0.28);
+  outline: none;
+}
+
+.book-nav:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.book-viewport {
+  height: min(72vh, 720px);
+  max-width: 720px;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 0;
+}
+
+.book-leaf {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.book-face {
+  position: absolute;
+  inset: 0;
+  overflow: auto;
+  padding: 1.35rem 1.5rem 1.75rem;
+  background:
+    radial-gradient(ellipse at 30% 0%, rgba(94, 200, 216, 0.12), transparent 55%),
+    linear-gradient(165deg, #071428 0%, #0a1f38 55%, #0d2744 100%);
+  color: #d6e8f5;
+  border: 1px solid rgba(94, 200, 216, 0.35);
+  border-radius: 1rem;
+  box-shadow:
+    0 18px 40px rgba(0, 4, 12, 0.55),
+    inset 0 0 0 1px rgba(143, 217, 232, 0.08);
+  opacity: 1;
+  transition: opacity 0.28s ease;
+}
+
+.book-face--front.is-fading {
+  opacity: 0;
+}
+
+.book-face--back {
+  display: none;
+}
+
+.book-face.is-part {
+  background:
+    radial-gradient(ellipse at 50% 20%, rgba(94, 200, 216, 0.22), transparent 55%),
+    linear-gradient(165deg, #020814 0%, #0a1f38 60%, #123454 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.book-face .section-heading {
+  margin-top: 0;
+}
+
+.book-face.is-part .section-heading {
+  color: #5ec8d8;
+  text-align: center;
+  border-left: none;
+  padding-left: 0;
+}
+
+.book-face .salt-channel {
+  text-align: left;
+}
+
+.book-cover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 100%;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.book-cover__kicker {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #5ec8d8;
+  margin: 0;
+}
+
+.book-cover__title {
+  font-family: "IBM Plex Serif", Georgia, serif;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 500;
+  margin: 0.25rem 0;
+  color: #e8fbff;
+}
+
+.book-cover__author {
+  font-family: "IBM Plex Serif", Georgia, serif;
+  font-style: italic;
+  color: #8fd9e8;
+  margin: 0 0 0.75rem;
+}
+
+.book-cover__art {
+  width: min(240px, 58%);
+  border: 1px solid rgba(94, 200, 216, 0.45);
+  border-radius: 0.75rem;
+  margin: 0.25rem auto 0.75rem;
+  background: rgba(2, 8, 20, 0.5);
+}
+
+.book-cover__hint {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #7eb8d0;
+  margin: 0.5rem 0 0;
+}
+
+.book-chapter-rail {
+  display: flex;
+  gap: 0.45rem;
+  overflow-x: auto;
+  padding: 0.65rem 1rem 1rem;
+  scrollbar-width: thin;
+}
+
+.book-chip {
+  flex: 0 0 auto;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #8fd9e8;
+  background: rgba(7, 20, 40, 0.75);
+  border: 1px solid rgba(94, 200, 216, 0.35);
+  border-radius: 999px;
+  padding: 0.4rem 0.7rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.book-chip--part {
+  border-color: rgba(94, 200, 216, 0.65);
+  color: #e8fbff;
+}
+
+.book-chip.is-active,
+.book-chip:hover,
+.book-chip:focus-visible {
+  background: rgba(94, 200, 216, 0.28);
+  color: #fff;
+  outline: none;
+}
+
+.book-hint {
+  display: none;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #7eb8d0;
+  text-align: center;
+  padding: 0 1rem 0.75rem;
+}
+
+@media (min-width: 720px) {
+  .book-hint {
+    display: block;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .book-face {
+    transition: none;
+  }
+}
+
+.book-mobile-nav {
+  display: none;
+  gap: 0.5rem;
+  padding: 0 1rem 0.5rem;
+}
+
+.book-mobile-nav .book-nav {
+  flex: 1;
+  width: auto;
+  border-radius: 999px;
+}
+
+@media (max-width: 640px) {
+  .book-stage {
+    grid-template-columns: 1fr;
+    padding: 0.5rem;
+  }
+
+  .book-stage > .book-nav {
+    display: none;
+  }
+
+  .book-mobile-nav {
+    display: flex;
+  }
+
+  .book-viewport {
+    height: min(62vh, 640px);
+  }
+
+  .book-chrome__title {
+    flex-basis: 100%;
+  }
+}
